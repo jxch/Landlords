@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="sample.rooms.RoomsController"
+          vgap="10" hgap="10">
+    <padding>
+        <Insets top="10" left="10" right="10" bottom="10"/>
+    </padding>
+
+    <HBox GridPane.rowIndex="0" GridPane.columnIndex="0" spacing="10" prefWidth="100">
+        <padding>
+            <Insets top="10" bottom="10" right="10" left="10"/>
+        </padding>
+        <Label text="积分："/>
+        <Label fx:id="integral" text="****"/>
+        <!--todo 显示积分事件-->
+    </HBox>
+    <VBox spacing="10" GridPane.rowIndex="0" GridPane.columnIndex="1" >
+        <padding>
+            <Insets top="10" bottom="10" right="10" left="10"/>
+        </padding>
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" bottom="10" right="10" left="10"/>
+            </padding>
+            <Label text="房间名："/>
+            <TextField fx:id="roomName"/>
+            <Button fx:id="findRoom" text="进入房间"/>
+        </HBox>
+        <HBox GridPane.rowIndex="0" GridPane.columnIndex="1" spacing="10">
+            <padding>
+                <Insets top="10" bottom="10" right="10" left="10"/>
+            </padding>
+            <Label text="房间名："/>
+            <TextField fx:id="createRoomName"/>
+            <Button fx:id="createRoom" onAction="#createRoom" text="创建房间"/>
+        </HBox>
+    </VBox>
+
+    <VBox GridPane.rowIndex="1" GridPane.columnIndex="0" spacing="10" prefWidth="100">
+        <padding>
+            <Insets top="10" bottom="10" right="10" left="10"/>
+        </padding>
+        <Button fx:id="refresh" onAction="#refresh" text="刷新"/>
+        <Button fx:id="Standings" text=" 积分榜 "/>
+        <Button fx:id="account" text="账户管理"/>
+    </VBox>
+
+    <VBox fx:id="table" spacing="10" GridPane.rowIndex="1" GridPane.columnIndex="1">
+        <padding>
+            <Insets top="10" bottom="10" right="10" left="10"/>
+        </padding>
+
+        <HBox spacing="10">
+            <padding>
+                <Insets top="10" bottom="10" right="10" left="10"/>
+            </padding>
+            <Label text="房间名"/>
+            <Label text="房间人数"/>
+            <Label text="操作"/>
+        </HBox>
+
+    </VBox>
+
+    <Label fx:id="massage" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+</GridPane>

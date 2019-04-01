@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.Line?>
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="sample.room.RoomController" prefWidth="1000" prefHeight="700">
+    <padding>
+        <Insets top="10" left="10" right="10" bottom="10"/>
+    </padding>
+    <top>
+        <VBox>
+            <HBox spacing="10">
+                <padding>
+                    <Insets top="10" left="10" right="10" bottom="10"/>
+                </padding>
+                <Button text="准备" onAction="#ready" fx:id="ready"/>
+            </HBox>
+            <Line endX="1000"/>
+        </VBox>
+    </top>
+    <left>
+        <HBox>
+            <VBox spacing="10">
+                <padding>
+                    <Insets top="10" left="10" right="10" bottom="10"/>
+                </padding>
+                <GridPane vgap="10" hgap="10">
+                    <Label text="用户名：" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Label fx:id="usernameLeft" text="无" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Label text="积分：" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <Label fx:id="integralLeft" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    <Label text="剩余牌数：" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <Label fx:id="cardsRemainingLeft" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                    <Label text="剩余时间：" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <Label fx:id="timeRemainingLeft" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    <Label fx:id="landlordLeft" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <Label fx:id="playLeft" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                </GridPane>
+            </VBox>
+            <Line endY="400"/>
+        </HBox>
+    </left>
+    <right>
+        <HBox>
+            <Line endY="400"/>
+            <VBox spacing="10">
+                <padding>
+                    <Insets top="10" left="10" right="10" bottom="10"/>
+                </padding>
+                <GridPane vgap="10" hgap="10">
+                    <Label text="用户名：" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Label fx:id="usernameRight" text="无" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Label text="积分：" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+                    <Label fx:id="integralRight" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+                    <Label text="剩余牌数：" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <Label fx:id="cardsRemainingRight" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                    <Label text="剩余时间：" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <Label fx:id="timeRemainingRight" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    <Label fx:id="landlordRight" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <Label fx:id="playRight" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                </GridPane>
+            </VBox>
+        </HBox>
+    </right>
+    <bottom>
+        <VBox>
+            <Line endX="1000"/>
+            <HBox spacing="10" prefWidth="1000">
+                <padding>
+                    <Insets top="10" left="10" right="10" bottom="10"/>
+                </padding>
+                <GridPane vgap="10" hgap="10">
+                    <Label text="用户名：" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+                    <Label fx:id="username" text="无" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+                    <Label text="剩余牌数：" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+                    <Label fx:id="cardsRemaining" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+                    <Label text="剩余时间：" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+                    <Label fx:id="timeRemaining" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+                    <Label text="积分：" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+                    <Label fx:id="integral" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+                    <Label fx:id="landlord" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+                    <Label fx:id="play" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+                </GridPane>
+                <VBox spacing="10">
+                    <padding>
+                        <Insets top="10" left="10" right="10" bottom="10"/>
+                    </padding>
+                    <!--<HBox spacing="10" alignment="CENTER">-->
+                    <!--<padding>-->
+                    <!--<Insets top="10" left="10" right="10" bottom="10"/>-->
+                    <!--</padding>-->
+                    <Button fx:id="cards" text="出牌"/>
+                    <Button fx:id="pass" text="不要"/>
+                    <!--</HBox>-->
+                    <!--<HBox fx:id="image" spacing="10">-->
+                    <!--<padding>-->
+                    <!--<Insets top="10" left="10" right="10" bottom="10"/>-->
+                    <!--</padding>-->
+
+                    <!--</HBox>-->
+                </VBox>
+                <!--<VBox spacing="10" alignment="TOP_RIGHT">-->
+                <!--<padding>-->
+                <!--<Insets top="10" left="10" right="10" bottom="10"/>-->
+                <!--</padding>-->
+                <!--<Button fx:id="hosted" text="托管"/>-->
+                <!--<Button fx:id="cancelHosted" text="取消托管"/>-->
+                <!--<Button fx:id="displayCards" text="明牌"/>-->
+                <!--</VBox>-->
+                <HBox fx:id="poke" spacing="-80" alignment="BOTTOM_LEFT" prefHeight="190">
+
+                </HBox>
+            </HBox>
+        </VBox>
+    </bottom>
+    <center>
+        <VBox spacing="10" alignment="CENTER">
+            <HBox spacing="50" alignment="CENTER" fx:id="landlordsCards">
+
+            </HBox>
+            <Line endX="500"/>
+            <HBox spacing="-60" fx:id="playCards" alignment="CENTER">
+
+            </HBox>
+            <Label fx:id="message"/>
+        </VBox>
+    </center>
+</BorderPane>

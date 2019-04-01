@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="sample.loginAndRegistered.RegistrationController"
+          vgap="10" hgap="10">
+    <padding>
+        <Insets top="10" bottom="10" left="10" right="10"/>
+    </padding>
+    <Label text="用户名：" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="username" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="密码：" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="password" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="邮件：" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="email" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <Button fx:id="registrationAndLogin" onAction="#registrationAndLogin" text="注册/登陆" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+    <Label text="服务器套接字:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+    <TextField fx:id="socket" text="127.0.0.1:8189" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+    <Label fx:id="fieldTestMessage" text="名字和密码不要加冒号‘:’,请不要使用中文,每个字段不要超过10位；" GridPane.rowIndex="5" GridPane.columnIndex="0" GridPane.columnSpan="2"/>
+</GridPane>
